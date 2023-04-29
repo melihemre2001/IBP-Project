@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    
+
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container2{
+    
+   
+
+}
+
+.navbar-logo{
+
+    width: 200px;
+    height: auto;
+}
+
+.logo-text{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-item{
+    text-decoration: none;
+    display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+    
+
+}
