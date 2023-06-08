@@ -23,12 +23,12 @@
           <ul>
             <li><a class="navbar-links-elements" href="#">Features</a></li>
             <li><a class="navbar-links-elements" href="#">How It Works</a></li>
-            <li><a class="navbar-links-elements" href="#">Privacy</a></li>
+            <li><a class="navbar-links-elements" href="#">FAQ</a></li>
           </ul>
         </div>
         <div class="navbar-links-2">
-          <a href="#" class="login-btn">Log In</a>
-          <a href="#" class="btn">FAQ</a>
+          <a href="logout.php" class="btn login-btn">Logout</a>
+          
         </div>
       </nav>
       <div class="content">
@@ -37,15 +37,15 @@
         <p>We are trying to find the best car for you.</p>
         <br />
 
-        <a href="#section-cars" class="btn btn-start">Get Started</a>
+        <a href="#section-header" class="btn btn-start">Get Started</a>
       </div>
-      <div class="section-header">
+      <div id="section-header" class="section-header">
         <h1 style="color: #fff">Choose your own type</h1>
       </div>
       <section id="section-cars">
         <div class="cars">
           <div class="cars-item car-suvs">
-            <a href="#">
+            <a href="#suvinfo">
               <img src="images/suv.svg" alt="" />
             </a>
             <p>SUV's</p>
@@ -62,13 +62,13 @@
             </a>
             <p>Sedans</p>
           </div>
-          <div class="cars-item car-sedans">
+          <div class="cars-item car-vans">
             <a href="#">
               <img src="images/vans.svg" alt="" />
             </a>
             <p>Vans</p>
           </div>
-          <div class="cars-item car-sedans">
+          <div class="cars-item car-hybrids">
             <a href="#">
               <img src="images/hybrids.svg" alt="" />
             </a>
@@ -76,6 +76,11 @@
           </div>
         </div>
       </section>
+      <div id="suvinfo" class="cars-item-list">
+          <div class="cars-gallery">
+            <img src="images/suvs" alt="">
+          </div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
