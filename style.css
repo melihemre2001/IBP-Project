@@ -9,7 +9,7 @@
   font-family: "Poppins";
   src: url(https://fonts.google.com/specimen/Poppins) format("truetype");
 }
-html{
+html {
   width: 100%;
   padding: 0;
   margin: 0;
@@ -22,10 +22,47 @@ body {
   background-color: black;
   color: #fff;
   width: 100%;
-  
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+  padding-top: 30px;
+  color: black;
+}
+h6 {
+  font-size: 26px;
+  text-align: center;
+  color: black;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+}
+li {
+  padding-top: 5px;
+  margin: 5px;
+  color: black;
+}
+.fa {
+  font-size: 26px;
+  transition: 0.4s;
+  margin: 3px;
+}
+.checked {
+  color: #ff9f43;
+}
+.checked-half {
+  color: #ff9f43;
   
 }
-.loginform{
+.loginform {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -36,24 +73,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
-.loginform h1{
+.loginform h1 {
   display: flex;
   justify-content: center;
 }
-.loginform form{
+.loginform form {
   display: flex;
   flex-direction: column;
 }
-.loginform input{
+.loginform input {
   width: 40%;
 }
-.loginform button{
+.loginform button {
   width: 80%;
   height: 5%;
-  
-  
 }
 .container {
   min-height: 100vh;
@@ -117,9 +151,8 @@ body {
   background-image: linear-gradient(45deg, black, white);
   font-size: 14px;
   border-radius: 30px;
-  
 }
-.btn:hover{
+.btn:hover {
   color: black;
 }
 
@@ -127,11 +160,11 @@ body {
   width: 100%;
   height: 100vh;
   background-image: url(images/backgroundimg.jpeg);
-  
+
   background-size: 100% auto;
   background-repeat: no-repeat;
   overflow: hidden;
-  padding: 5% 5%;  
+  padding: 5% 5%;
   opacity: 0.75;
 }
 
@@ -166,28 +199,26 @@ body {
   border-radius: 10px;
   z-index: 9999;
 }
-.section-header{
+.section-header {
   display: flex;
   justify-content: center;
   padding-top: 200px;
 }
-#section-cars{
+#section-cars {
   width: 100%;
   height: 50vh;
   padding-bottom: 100px;
   display: flex;
-  
 }
-.cars{
+.cars {
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
   width: 100%;
   gap: 16px;
-  
 }
-.cars-item{
+.cars-item {
   display: flex;
   height: auto;
   flex-direction: column;
@@ -195,36 +226,89 @@ body {
   justify-content: center;
 }
 
-
-.cars-item a{
+.cars-item a {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.cars-item img{
-  width: 50%;
+.cars-item img {
+  width: 70%;
   cursor: pointer;
 }
-.cars-item-list{
+.cars-item-list {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: 100vh;
-  background-color: #fff;
-  margin-top: 200px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
   
-  
+}
+
+.cars-gallery {
+  width: 300px;
+  height: 550px;
+  margin: 15px;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+  background: #f2f2f2;
+}
+
+.cars-gallery:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.cars-gallery-img {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  margin: 0;
+  display: block;
+  border-radius: 20px;
+}
+
+.buy-btn{
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  margin-top: 55px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #2183a2;
+}
+
+@media (max-width: 1000px){
+    .cars-gallery{
+      width: 45px;
+    }
+}
+@media (max-width: 750px){
+    .cars-gallery{
+      width: 90%;
+    }
+    .cars-gallery-img{
+      width: 90%;
+      margin: 0 auto;
+    }
 }
 
 
 @media (max-width: 400px) {
-  
-  
   .toggle-button {
     display: flex;
     position: fixed;
     z-index: 9999;
   }
   .navbar-links-2 {
-    
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -244,19 +328,15 @@ body {
     transition: all 0.3s ease;
     flex-direction: column;
     z-index: 9998;
-    
   }
   .navbar-links ul {
     width: 100%;
     flex-direction: column;
     justify-content: center;
-
   }
   .navbar-links-2 a {
-    
     color: #fff;
     margin: 0;
-
   }
   .navbar-links li {
     text-align: center;
@@ -266,33 +346,30 @@ body {
     padding: 0.5rem 1rem;
     color: #fff;
   }
-  
-  .navbar.active{
-  
+
+  .navbar.active {
     left: 0;
-    
   }
-  .navbar-links-2.active{
+  .navbar-links-2.active {
     display: flex;
   }
-  .content{
+  .content {
     margin-top: 30%;
     height: auto;
   }
-  .content p{
+  .content p {
     font-size: 15px;
     margin-top: 10px;
   }
 
-  .btn-start{
+  .btn-start {
     margin-top: 20px;
   }
-  .logo{
+  .logo {
     width: 250px;
     height: 250px;
   }
-  .container{
+  .container {
     height: 100%;
   }
 }
-
