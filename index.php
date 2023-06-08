@@ -1,3 +1,8 @@
+<?php
+require 'config.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -90,7 +95,7 @@
               <li><i class="fa fa-star"></i></li>
             </ul>
             
-            <button class="buy-btn">Buy Now</button>
+            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
           </div>
           <div class="cars-gallery">
             <img src="images/suvs/chevrolet.webp" class="cars-gallery-img" alt="">
@@ -104,7 +109,7 @@
               <li><i class="fa fa-star checked"></i></li>
             </ul>
             
-            <button class="buy-btn">Buy Now</button>
+            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
           </div>
           <div class="cars-gallery">
             <img src="images/suvs/captiva.webp" class="cars-gallery-img" alt="">
@@ -119,7 +124,7 @@
               <li><i class="fa fa-star"></i></li>
             </ul>
             
-            <button class="buy-btn">Buy Now</button>
+            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
           </div>
           <div class="cars-gallery">
             <img src="images/suvs/tucson.webp" class="cars-gallery-img" alt="">
@@ -134,7 +139,7 @@
               <li><i class="fa fa-star"></i></li>
             </ul>
             
-            <button class="buy-btn">Buy Now</button>
+            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
           </div>
       </div>
       <div id="trucksinfo" class="cars-item-list">
@@ -150,7 +155,7 @@
               <li><i class="fa fa-star"></i></li>
             </ul>
             
-            <button class="buy-btn">Buy Now</button>
+            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
           </div>
           <div class="cars-gallery">
             <img src="images/trucks/ford.webp" class="cars-gallery-img" alt="">
@@ -164,7 +169,7 @@
               <li><i class="fa fa-star checked"></i></li>
             </ul>
             
-            <button class="buy-btn">Buy Now</button>
+            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
           </div>
           <div class="cars-gallery">
             <img src="images/trucks/ram.webp" class="cars-gallery-img" alt="">
@@ -179,7 +184,7 @@
               <li><i class="fa fa-star"></i></li>
             </ul>
             
-            <button class="buy-btn">Buy Now</button>
+            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
           </div>
           <div class="cars-gallery">
             <img src="images/trucks/silverado.webp" class="cars-gallery-img" alt="">
@@ -194,7 +199,7 @@
               <li><i class="fa fa-star"></i></li>
             </ul>
             
-            <button class="buy-btn">Buy Now</button>
+            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
           </div>
       </div>
     </div>
