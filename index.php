@@ -1,208 +1,90 @@
 <?php
-require 'config.php';
+require('config.php');
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  </head>
-  <body>
-    <div class="container">
-      <a href="#" class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-      <nav class="navbar">
-        <div class="navbar-logo">
-          <a href="#"><img src="images/logo.png" class="logo" alt="" /></a>
-        </div>
 
-        <div class="navbar-links">
-          <ul>
-            <li><a class="navbar-links-elements" href="#">Features</a></li>
-            <li><a class="navbar-links-elements" href="how-it-works.html">How It Works</a></li>
-            <li><a class="navbar-links-elements" href="#">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="navbar-links-2">
-          <a href="logout.php" class="btn login-btn">Logout</a>
-          
-        </div>
-      </nav>
-      <div class="content">
-        <p>Buy The Right Car.</p>
-        <br />
-        <p>We are trying to find the best car for you.</p>
-        <br />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 
-        <a href="#section-header" class="btn btn-start">Get Started</a>
+<body>
+  <div class="container">
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="#"><img src="images/logo.png" class="logo" alt="" /></a>
       </div>
-      <div id="section-header" class="section-header">
-        <h1 style="color: #fff">Choose your own type</h1>
+
+      <div class="navbar-links">
+        <ul>
+          <li><a class="navbar-links-elements" href="#">Features</a></li>
+          <li><a class="navbar-links-elements" href="how-it-works.html">How It Works</a></li>
+          <li><a class="navbar-links-elements" href="#">FAQ</a></li>
+        </ul>
       </div>
-      <section id="section-cars">
-        <div class="cars">
-          <div class="cars-item car-suvs">
-            <a href="#suvsinfo">
-              <img src="images/suv.svg" alt="" />
-            </a>
-            <p>SUV's</p>
-          </div>
-          <div class="cars-item car-trucks">
-            <a href="#trucksinfo">
-              <img src="images/pickup-trucks.svg" alt="" />
-            </a>
-            <p>Trucks</p>
-          </div>
-          <div class="cars-item car-sedans">
-            <a href="#">
-              <img src="images/sedans.svg" alt="" />
-            </a>
-            <p>Sedans</p>
-          </div>
-          <div class="cars-item car-vans">
-            <a href="#">
-              <img src="images/vans.svg" alt="" />
-            </a>
-            <p>Vans</p>
-          </div>
-          <div class="cars-item car-hybrids">
-            <a href="#">
-              <img src="images/hybrids.svg" alt="" />
-            </a>
-            <p>Hybrids</p>
-          </div>
-        </div>
-      </section>
-      <div id="suvsinfo" class="cars-item-list">
-          <div class="cars-gallery">
-            <img src="images/suvs/hero.webp" class="cars-gallery-img" alt="">
-            <h3>2017 Jeep Cherokee Sport</h6>
-            <h6>$16.998</h6>
-            <ul>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-            </ul>
-            
-            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
-          </div>
-          <div class="cars-gallery">
-            <img src="images/suvs/chevrolet.webp" class="cars-gallery-img" alt="">
-            <h3>2022 Chevrolet Tahoe Z71</h6>
-            <h6>$80.998</h6>
-            <ul>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-            </ul>
-            
-            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
-          </div>
-          <div class="cars-gallery">
-            <img src="images/suvs/captiva.webp" class="cars-gallery-img" alt="">
-            <h3>2013 Chevrolet Captiva Sport LS</h6>
-              
-            <h6>$11.998</h6>
-            <ul>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-            </ul>
-            
-            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
-          </div>
-          <div class="cars-gallery">
-            <img src="images/suvs/tucson.webp" class="cars-gallery-img" alt="">
-            <h3>2019 Hyundai Tucson Sport</h6>
-            <h6>$25.998</h6>
-            
-            <ul>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star"></i></li>
-            </ul>
-            
-            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
-          </div>
+      <div class="navbar-links-2">
+        <a href="logout.php" class="btn login-btn">Logout</a>
+
       </div>
-      <div id="trucksinfo" class="cars-item-list">
-          <div class="cars-gallery">
-            <img src="images/trucks/gmc.webp" class="cars-gallery-img" alt="">
-            <h3>2020 GMC Sierra 1500 Elevation</h6>
-            <h6>$39.998</h6>
-            <ul>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star"></i></li>
-            </ul>
-            
-            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
-          </div>
-          <div class="cars-gallery">
-            <img src="images/trucks/ford.webp" class="cars-gallery-img" alt="">
-            <h3>2023 Ford F150 Lightning Lariat</h6>
-            <h6>$85.998</h6>
-            <ul>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-            </ul>
-            
-            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
-          </div>
-          <div class="cars-gallery">
-            <img src="images/trucks/ram.webp" class="cars-gallery-img" alt="">
-            <h3>2014 Ram 1500 Tradesman</h6>
-         
-            <h6>$18.998</h6>
-            <ul>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-            </ul>
-            
-            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
-          </div>
-          <div class="cars-gallery">
-            <img src="images/trucks/silverado.webp" class="cars-gallery-img" alt="">
-            <h3>2015 Chevrolet Silverado 1500 LTZ</h6>
-            <h6>$31.998</h6>
-            
-            <ul>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star checked"></i></li>
-              <li><i class="fa fa-star"></i></li>
-            </ul>
-            
-            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
-          </div>
-      </div>
+    </nav>
+    <div class="content">
+      <p>Buy The Right Car.</p>
+      <br />
+      <p>We are trying to find the best car for you.</p>
+      <br />
+
+      <a href="#section-header" class="btn btn-start">Get Started</a>
     </div>
-    <script src="script.js"></script>
-  </body>
-</html>
+    <div id="section-header" class="section-header">
+      <h1 style="color: #fff">Choose your own type</h1>
+    </div>
+    <section id="section-cars">
+      <div class="cars">
+        <div class="cars-item car-suvs">
+          <a href="#suvsinfo">
+            <img src="images/suv.svg" alt="" />
+          </a>
+          <p>SUV's</p>
+        </div>
+        <div class="cars-item car-trucks">
+          <a href="#trucksinfo">
+            <img src="images/pickup-trucks.svg" alt="" />
+          </a>
+          <p>Trucks</p>
+        </div>
+        <div class="cars-item car-sedans">
+          <a href="#">
+            <img src="images/sedans.svg" alt="" />
+          </a>
+          <p>Sedans</p>
+        </div>
+        <div class="cars-item car-vans">
+          <a href="#">
+            <img src="images/vans.svg" alt="" />
+          </a>
+          <p>Vans</p>
+        </div>
+        <div class="cars-item car-hybrids">
+          <a href="#">
+            <img src="images/hybrids.svg" alt="" />
+          </a>
+          <p>Hybrids</p>
+        </div>
+      </div>
+    </section>
+    <div id="suvsinfo" class="cars-item-list">
+
+      <?php
+      require('cars.php');
+      ?>
+    </div>

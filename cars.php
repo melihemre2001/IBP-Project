@@ -1,25 +1,34 @@
 <?php
+require "config.php";
 
-// Database connection
+$sql = 'SELECT brand, model, year, price, color, rating from suvs';
+$result = $conn->query($sql);
 
-require 'config.php';
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $suv_brand = $row['brand'];
+        $suv_model = $row['model'];
+        $suv_year = $row['year'];
+        $suv_price = $row['price'];
+        $suv_color = $row['color'];
+        $suv_rating = $row['rating'];
 
-// Added cars to database
+?>
+        <div class="cars-gallery">
+            <img src="images/suvs/hero.webp" class="cars-gallery-img" alt="">
+            <h3><?php echo $suv_year . ' ' . $suv_brand . ' ' . $suv_model ?></h3>
+            <h6><?php echo $suv_price; ?></h6>
+            <ul>
+                <?php for ($i = 0; $i < $suv_rating; $i++) { ?>
+                    <li><i class="fa fa-star checked"></i></li>
+                <?php } ?>
+                <?php for ($i = $suv_rating; $i < 5; $i++) { ?>
+                    <li><i class="fa fa-star"></i></li>
+                <?php } ?>
+            </ul>
+            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
+        </div>
 
-// $suv = "INSERT INTO suvs VALUES('Chevrolet','Captiva Sport LS','2013','11.998','blue')";
-// $suv = "INSERT INTO suvs VALUES('Chevrolet','Tahoe Z71','2022','80.998','black')";
-// $suv = "INSERT INTO suvs VALUES('Chevrolet','Captiva Sport LS','2013','11.998','blue')";
-// $suv = "INSERT INTO suvs VALUES('Hyundai','Tucson Sport','2019','25.998','gray')";
-
-// $addsuv = mysqli_query($conn, $suv);
-
-  
-// $truck = "INSERT INTO trucks VALUES('GMC','Sierra 1500 Elevation','2020','39.998','black')";
-// $truck = "INSERT INTO trucks VALUES('Ford','F150 Lightning Lariat','2023','85.998','blue')";
-// $truck = "INSERT INTO trucks VALUES('Ram','1500 Tradesman','2014','18.998','red')";
-// $truck = "INSERT INTO trucks VALUES('Chevrolet','Silverado 1500 LTZ','2015','31.998','black')";
-
-// $addtruck = mysqli_query($conn, $truck);
-
-
-    ?>
+<?php
+    }
+}
