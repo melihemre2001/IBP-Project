@@ -1,6 +1,7 @@
 <?php
 require('config.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,40 +52,41 @@ require('config.php');
     <section id="section-cars">
       <div class="cars">
         <div class="cars-item car-suvs">
-          <a href="#suvsinfo">
+          <a href="#suvs">
             <img src="images/suv.svg" alt="" />
           </a>
           <p>SUV's</p>
         </div>
         <div class="cars-item car-trucks">
-          <a href="#trucksinfo">
+          <a href="#trucks">
             <img src="images/pickup-trucks.svg" alt="" />
           </a>
           <p>Trucks</p>
         </div>
         <div class="cars-item car-sedans">
-          <a href="#">
+          <a href="#sedans">
             <img src="images/sedans.svg" alt="" />
           </a>
           <p>Sedans</p>
         </div>
         <div class="cars-item car-vans">
-          <a href="#">
+          <a href="#vans">
             <img src="images/vans.svg" alt="" />
           </a>
           <p>Vans</p>
         </div>
         <div class="cars-item car-hybrids">
-          <a href="#">
+          <a href="#hybrids">
             <img src="images/hybrids.svg" alt="" />
           </a>
           <p>Hybrids</p>
         </div>
       </div>
     </section>
-    <div id="suvsinfo" class="cars-item-list">
 
+    <div id="car-list">
       <?php
       require('cars.php');
       ?>
+
     </div>

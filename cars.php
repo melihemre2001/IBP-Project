@@ -1,34 +1,44 @@
 <?php
-require "config.php";
 
-$sql = 'SELECT brand, model, year, price, color, rating from suvs';
-$result = $conn->query($sql);
+require 'config.php';
 
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $suv_brand = $row['brand'];
-        $suv_model = $row['model'];
-        $suv_year = $row['year'];
-        $suv_price = $row['price'];
-        $suv_color = $row['color'];
-        $suv_rating = $row['rating'];
+$vehicles = array('suvs', 'trucks', 'sedans', 'vans', 'hybrids');
 
+foreach ($vehicles as $vehicleType) {
+    $query = "SELECT brand, model, year, price, color, rating, img FROM $vehicleType";
+    $result = $conn->query($query);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+
+            $brand = $row['brand'];
+            $model = $row['model'];
+            $year = $row['year'];
+            $price = $row['price'];
+            $color = $row['color'];
+            $rating = $row['rating'];
+            $img = $row['img'];
+            $imagePath = "images/$vehicleType/$img";
+            $vehicleID = $vehicleType . '-' . $brand . '-' . $model;
 ?>
-        <div class="cars-gallery">
-            <img src="images/suvs/hero.webp" class="cars-gallery-img" alt="">
-            <h3><?php echo $suv_year . ' ' . $suv_brand . ' ' . $suv_model ?></h3>
-            <h6><?php echo $suv_price; ?></h6>
-            <ul>
-                <?php for ($i = 0; $i < $suv_rating; $i++) { ?>
-                    <li><i class="fa fa-star checked"></i></li>
-                <?php } ?>
-                <?php for ($i = $suv_rating; $i < 5; $i++) { ?>
-                    <li><i class="fa fa-star"></i></li>
-                <?php } ?>
-            </ul>
-            <a href="purchase.php"><button class="buy-btn">Buy Now</button></a>
-        </div>
-
+            <div id="<?php echo $vehicleID; ?>" class="cars-item-list">
+                <div class="cars-gallery">
+                    <img src="<?php echo $imagePath; ?>" class="cars-gallery-img" alt="">
+                    <h3><?php echo $year . ' ' . $brand . ' ' . $model ?></h3>
+                    <h6><?php echo '$' . $price; ?></h6>
+                    <ul>
+                        <?php for ($i = 0; $i < $rating; $i++) { ?>
+                            <li><i class="fa fa-star checked"></i></li>
+                        <?php } ?>
+                        <?php for ($i = $rating; $i < 5; $i++) { ?>
+                            <li><i class="fa fa-star"></i></li>
+                        <?php } ?>
+                    </ul>
+                    <a href="purchase.php?vehicle=<?php echo $vehicleID; ?>"><button class="buy-btn">Buy Now</button></a>
+                </div>
+            </div>
 <?php
+        }
     }
 }
+?>

@@ -58,10 +58,7 @@ li {
 .checked {
   color: #ff9f43;
 }
-.checked-half {
-  color: #ff9f43;
-  
-}
+
 .loginform {
   position: absolute;
   top: 50%;
@@ -282,8 +279,33 @@ li {
   height: 300px;
   text-align: center;
   margin: 0;
-  display: block;
   border-radius: 20px;
+}
+
+.cars-gallery h6{
+  color: black;
+}
+
+.car-list{
+  display: flex;
+  align-items: center;
+}
+
+.car-details{
+  width: 800px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  
+}
+.car-details h3,h6{
+  color: #fff;
+}
+.car-details img{
+  height: 300px;
+  width: 300px;
 }
 
 .buy-btn{
