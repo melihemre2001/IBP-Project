@@ -50,6 +50,21 @@ li {
   margin: 5px;
   color: black;
 }
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 999;
+  border: 2px solid #fff;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
 .fa {
   font-size: 26px;
   transition: 0.4s;
@@ -92,6 +107,10 @@ li {
   display: block;
   align-items: center;
 }
+.container-purchase{
+  display: flex;
+  flex-direction: row;
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -106,6 +125,7 @@ li {
   height: 200px;
   margin: 0.5rem;
 }
+
 
 .navbar-links ul {
   margin: 0;
@@ -152,19 +172,17 @@ li {
 .btn:hover {
   color: black;
 }
-.homepage-btn{
+.homepage-btn {
   color: #fff;
-  height: 50px ;
+  height: 50px;
   width: 50px;
   margin: 40px 40px;
-  
 }
-#how-it-works{
-  
+#how-it-works {
   top: 50%;
   left: 50%;
   position: absolute;
-  transform: translate(-50% , -50%);
+  transform: translate(-50%, -50%);
   width: 500px;
 }
 
@@ -248,25 +266,21 @@ li {
   cursor: pointer;
 }
 .cars-item-list {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
-  width: 100%;
   justify-content: center;
   align-items: center;
   margin-top: 150px;
-  
 }
 
 .cars-gallery {
   width: 300px;
-  height: 550px;
+ 
   margin: 15px;
   box-sizing: border-box;
-  float: left;
   text-align: center;
   border-radius: 20px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-
   background: #f2f2f2;
 }
 
@@ -275,40 +289,47 @@ li {
 }
 
 .cars-gallery-img {
-  width: 300px;
-  height: 300px;
-  text-align: center;
-  margin: 0;
-  border-radius: 20px;
+ display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
 }
-
 .cars-gallery h6{
   color: black;
 }
 
-.car-list{
-  display: flex;
-  align-items: center;
+#car-list {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  gap: 50px;
+  margin-top: 50px;
+  justify-content: center;
+  padding: 40px;
 }
 
-.car-details{
+.car-details {
   width: 800px;
-  height: 300px;
-  top: 50%;
-  left: 50%;
+  height: 400px;
+  top: 60%;
+  left: 30%;
   transform: translate(-50%, -50%);
   position: absolute;
   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
 }
-.car-details h3,h6{
+.car-details h3,
+h6 {
   color: #fff;
 }
-.car-details img{
-  height: 300px;
-  width: 300px;
-}
 
-.buy-btn{
+
+.buy-btn {
   text-align: center;
   font-size: 24px;
   color: #fff;
@@ -322,22 +343,100 @@ li {
   border-bottom-left-radius: 20px;
   background-color: #2183a2;
 }
-
-@media (max-width: 1000px){
-    .cars-gallery{
-      width: 45px;
-    }
+.purchase-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 900px;
+  height: 600px;
+  float: right;
+  flex-direction: column;
+  
 }
-@media (max-width: 750px){
-    .cars-gallery{
-      width: 90%;
-    }
-    .cars-gallery-img{
-      width: 90%;
-      margin: 0 auto;
-    }
+.purchase-btn p{
+  margin-bottom: 150px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.purchase-buy-btn {
+  width: 150px;
+  height: 75px;
+  font-size: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #fff;
+}
+.purchase-no-btn {
+  color: #fff;
+  background-color: black;
+  background: none;
+  cursor: pointer;
+  border: none;
 }
 
+.thanks{
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.thanks-choose {
+  font-size: 50px;
+}
+.thanks-deliver{
+  font-size: 30px;
+}
+
+.footer {
+  background-color: black;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer p {
+  margin: 0;
+  justify-content: center;
+}
+.footer-p {
+  max-width: 960px;
+  margin: 0 auto;
+}
+@media (max-width: 1000px) {
+  .cars-gallery {
+    width: 45px;
+  }
+}
+@media (max-width: 750px) {
+  .cars-gallery {
+    display: inline-block;
+    width: 90%;
+    padding: 0;
+    font-size: 20px;
+  
+    
+  }
+  .cars-gallery-img {
+    width: 90%;
+    margin: 0 auto;
+  }
+  #car-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .cars-item-list {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+}
 
 @media (max-width: 400px) {
   .toggle-button {

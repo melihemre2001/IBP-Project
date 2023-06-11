@@ -1,5 +1,9 @@
 <?php
 
+
+
+
+
 require 'config.php';
 
 $vehicles = array('suvs', 'trucks', 'sedans', 'vans', 'hybrids');
@@ -19,24 +23,37 @@ foreach ($vehicles as $vehicleType) {
             $rating = $row['rating'];
             $img = $row['img'];
             $imagePath = "images/$vehicleType/$img";
-            $vehicleID = $vehicleType . '-' . $brand . '-' . $model;
+            $vehicleID = $model;
 ?>
-            <div id="<?php echo $vehicleID; ?>" class="cars-item-list">
-                <div class="cars-gallery">
-                    <img src="<?php echo $imagePath; ?>" class="cars-gallery-img" alt="">
-                    <h3><?php echo $year . ' ' . $brand . ' ' . $model ?></h3>
-                    <h6><?php echo '$' . $price; ?></h6>
-                    <ul>
-                        <?php for ($i = 0; $i < $rating; $i++) { ?>
-                            <li><i class="fa fa-star checked"></i></li>
-                        <?php } ?>
-                        <?php for ($i = $rating; $i < 5; $i++) { ?>
-                            <li><i class="fa fa-star"></i></li>
-                        <?php } ?>
-                    </ul>
-                    <a href="purchase.php?vehicle=<?php echo $vehicleID; ?>"><button class="buy-btn">Buy Now</button></a>
+
+            <html>
+
+            <body>
+
+                <div id="<?php echo $vehicleID; ?>" class="cars-item-list <?php echo $vehicleType; ?>">
+                    <div class="cars-gallery">
+                        <img src="<?php echo $imagePath; ?>" class="cars-gallery-img" alt="">
+                        <h3><?php echo $year . ' ' . $brand . ' ' . $model ?></h3>
+                        <h6><?php echo '$' . $price; ?></h6>
+                        <ul>
+                            <?php for ($i = 0; $i < $rating; $i++) { ?>
+                                <li><i class="fa fa-star checked"></i></li>
+                            <?php } ?>
+                            <?php for ($i = $rating; $i < 5; $i++) { ?>
+                                <li><i class="fa fa-star"></i></li>
+                            <?php } ?>
+                        </ul>
+                        <a href="purchase.php?vehicle=<?php echo $vehicleID; ?>"><button onclick="getDivClass(this)" class="buy-btn">Buy Now</button></a>
+                    </div>
                 </div>
-            </div>
+
+                <script src="script.js"></script>
+            </body>
+
+            </html>
+
+
+
 <?php
         }
     }

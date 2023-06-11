@@ -7,6 +7,9 @@ echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-a
 
 require 'config.php';
 
+
+
+
 $selectedCarID = isset($_GET['vehicle']) ? $_GET['vehicle'] : null;
 
 $vehicles = array('suvs', 'trucks', 'sedans', 'vans', 'hybrids');
@@ -25,7 +28,7 @@ foreach ($vehicles as $vehicleType) {
             $rating = $row['rating'];
             $img = $row['img'];
             $imagePath = "images/$vehicleType/$img";
-            $vehicleID = $vehicleType . '-' . $brand . '-' . $model;
+            $vehicleID = $model;
 
             if ($vehicleID === $selectedCarID) {
                 $selectedBrand = $brand;
@@ -43,6 +46,7 @@ foreach ($vehicles as $vehicleType) {
 
 if ($selectedCarID) {
 ?>
+    <html>
 
     <body>
         <div class="container">
@@ -53,22 +57,16 @@ if ($selectedCarID) {
             </a>
             <nav class="navbar">
                 <div class="navbar-logo">
-                    <a href="#"><img src="images/logo.png" class="logo" alt="" /></a>
+                    <a href="index.php"><img src="images/logo.png" class="logo" alt="" /></a>
                 </div>
 
-                <div class="navbar-links">
-                    <ul>
-                        <li><a class="navbar-links-elements" href="#">Features</a></li>
-                        <li><a class="navbar-links-elements" href="how-it-works.html">How It Works</a></li>
-                        <li><a class="navbar-links-elements" href="#">FAQ</a></li>
-                    </ul>
-                </div>
+
                 <div class="navbar-links-2">
                     <a href="logout.php" class="btn login-btn">Logout</a>
 
                 </div>
             </nav>
-            <div id="<?php echo $selectedCarID; ?>">
+            <div id="<?php echo $selectedCarID; ?>" class="">
                 <div class="car-details">
                     <img src="<?php echo $selectedImagePath; ?>" class="car-gallery-img" alt="">
                     <h3><?php echo $selectedYear . ' ' . $selectedBrand . ' ' . $selectedModel ?></h3>
@@ -81,10 +79,28 @@ if ($selectedCarID) {
                             <li><i class="fa fa-star"></i></li>
                         <?php } ?>
                     </ul>
-                    <a href="purchase-completed.php"><button>Buy Now</button></a>
                 </div>
             </div>
-        <?php
-    }
+            <div class="purchase-btn">
+                <p>Are you sure?</p>
+                <a href="#"><button onclick="getDivId(this)" class="purchase-buy-btn">Buy Now</button></a>
+                <br>
+                <a href="index.php"><button class="purchase-no-btn">No, I'm Not</button></a>
 
-        ?>
+            </div>
+
+            <script src="script.js"></script>
+            <script>
+                let className = getDivClass();
+                document.querySelector(".purchase-buy-btn").parentNode.parentNode.previousElementSibling.classList.add(className);
+            </script>
+
+    </body>
+
+    </html>
+
+
+<?php
+}
+
+?>

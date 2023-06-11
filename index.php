@@ -23,8 +23,9 @@ require('config.php');
     </a>
     <nav class="navbar">
       <div class="navbar-logo">
-        <a href="#"><img src="images/logo.png" class="logo" alt="" /></a>
+        <a href="index.php"><img src="images/logo.png" class="logo" alt="" /></a>
       </div>
+
 
       <div class="navbar-links">
         <ul>
@@ -52,31 +53,31 @@ require('config.php');
     <section id="section-cars">
       <div class="cars">
         <div class="cars-item car-suvs">
-          <a href="#suvs">
+          <a href="#Captiva Sport LS">
             <img src="images/suv.svg" alt="" />
           </a>
           <p>SUV's</p>
         </div>
         <div class="cars-item car-trucks">
-          <a href="#trucks">
+          <a href="#1500 Tradesman">
             <img src="images/pickup-trucks.svg" alt="" />
           </a>
           <p>Trucks</p>
         </div>
         <div class="cars-item car-sedans">
-          <a href="#sedans">
+          <a href="#A4 Premium">
             <img src="images/sedans.svg" alt="" />
           </a>
           <p>Sedans</p>
         </div>
         <div class="cars-item car-vans">
-          <a href="#vans">
+          <a href="#NV 3500 SL">
             <img src="images/vans.svg" alt="" />
           </a>
           <p>Vans</p>
         </div>
         <div class="cars-item car-hybrids">
-          <a href="#hybrids">
+          <a href="#RX 450h F-SPORT">
             <img src="images/hybrids.svg" alt="" />
           </a>
           <p>Hybrids</p>
@@ -90,3 +91,18 @@ require('config.php');
       ?>
 
     </div>
+
+    <button onclick="scrollToTop()" id="topBtn">
+      <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <footer class="footer">
+      <div class="footer-p">
+        <p>&copy; 2023 Melih Car Dealership. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
