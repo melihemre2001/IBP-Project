@@ -20,9 +20,7 @@ if (isset($_POST["submit"])) {
         "<script> alert('User Not Registered'); </script>";
     }
 }
-$stylesheet_url = "style.css";
-$url = "style.css";
-echo "<link rel='stylesheet' href='{$stylesheet_url}'>";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,23 +30,138 @@ echo "<link rel='stylesheet' href='{$stylesheet_url}'>";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
-    <style><?php include 'C:\xampp\htdocs\dashboard\IBP Project\style.css'; ?></style>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: black;
+            display: flex;
+            font-family: sans-serif;
+        }
+
+        .navbar-logo-login {
+            width: 200px;
+            height: 200px;
+        }
+
+        .navbar-logo-login img {
+            width: 200px;
+            height: 200px;
+            display: block;
+            position: absolute;
+        }
+
+        .login-container {
+            margin: auto;
+            width: 500px;
+            max-width: 90%;
+        }
+
+        .login-container form {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-container form h1 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: #222;
+        }
+
+        .login-container form .form-control {
+            width: 100%;
+            height: 40px;
+            background: white;
+            border-radius: 4px;
+            border: 1px solid silver;
+            margin: 10px 0 18px 0;
+            padding: 0 10px;
+        }
+
+        .login-container form .login-btn {
+            margin-left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 34px;
+            border: none;
+            outline: none;
+            background: #27a327;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: white;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .login-container form .login-btn:hover {
+            opacity: 0.7;
+        }
+
+        .login-container form .register-btn {
+            margin-left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 34px;
+            border: none;
+            outline: none;
+            background: red;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: white;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .login-container form .register-btn:hover {
+            opacity: 0.7;
+        }
+
+        .btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    </style>
+
+</head>
+
+
+
+
 </head>
 
 <body>
-    <div class="loginform" style="position:absolute ">
-        <h1>Login</h1>
-        <form action="" class="" method="post" autocomplete="off">
-
-            <label for="usernameemail">Username or Email : </label>
-            <input type="text" name="usernameemail" id="usernameemail" requiredvalue=""> <br>
-            <label for="name">Password: </label>
-            <input type="password" name="password" id="password" requiredvalue=""> <br>
-            <button type="submit" name="submit">Login</button>
+    <div class="navbar-logo-login">
+        <a href="#"><img src="images/logo.png" class="logo" alt="" /></a>
+    </div>
+    <div class="login-container">
+        <form action="" method="post" autocomplete="off">
+            <h1>Login</h1>
+            <div class="form-group">
+                <label for="usernameemail"></label>
+                <input type="text" class="form-control" name="usernameemail" id="usernameemail" required placeholder="Username or Email">
+            </div>
+            <div class="form-group">
+                <label for="password"></label>
+                <input type="password" class="form-control" name="password" id="password" required placeholder="Password">
+            </div>
+            <div class="btn">
+                <button type="submit" name="submit" class="login-btn">Login</button>
+                <a href="register.php"><input type="submit" class="register-btn" id="" value="Register"></a>
+            </div>
         </form>
-        <br>
-        <a href="register.php">Register</a>
     </div>
 
 </body>

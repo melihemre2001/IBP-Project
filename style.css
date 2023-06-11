@@ -74,40 +74,14 @@ li {
   color: #ff9f43;
 }
 
-.loginform {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30%;
-  height: 30%;
-  background-color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.loginform h1 {
-  display: flex;
-  justify-content: center;
-}
-.loginform form {
-  display: flex;
-  flex-direction: column;
-}
-.loginform input {
-  width: 40%;
-}
-.loginform button {
-  width: 80%;
-  height: 5%;
-}
+
 .container {
   min-height: 100vh;
   width: 100%;
   display: block;
   align-items: center;
 }
-.container-purchase{
+.container-purchase {
   display: flex;
   flex-direction: row;
 }
@@ -125,7 +99,6 @@ li {
   height: 200px;
   margin: 0.5rem;
 }
-
 
 .navbar-links ul {
   margin: 0;
@@ -275,7 +248,7 @@ li {
 
 .cars-gallery {
   width: 300px;
- 
+
   margin: 15px;
   box-sizing: border-box;
   text-align: center;
@@ -289,13 +262,13 @@ li {
 }
 
 .cars-gallery-img {
- display: block;
+  display: block;
   margin: 0 auto;
   max-width: 100%;
   max-height: 100%;
   border-radius: 10px;
 }
-.cars-gallery h6{
+.cars-gallery h6 {
   color: black;
 }
 
@@ -315,19 +288,17 @@ li {
   left: 30%;
   transform: translate(-50%, -50%);
   position: absolute;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  
 }
 .car-details h3,
 h6 {
   color: #fff;
 }
-
 
 .buy-btn {
   text-align: center;
@@ -343,7 +314,7 @@ h6 {
   border-bottom-left-radius: 20px;
   background-color: #2183a2;
 }
-.purchase-btn{
+.purchase-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -351,9 +322,8 @@ h6 {
   height: 600px;
   float: right;
   flex-direction: column;
-  
 }
-.purchase-btn p{
+.purchase-btn p {
   margin-bottom: 150px;
   font-size: 40px;
   font-weight: bold;
@@ -374,7 +344,7 @@ h6 {
   border: none;
 }
 
-.thanks{
+.thanks {
   width: 100%;
   top: 50%;
   left: 50%;
@@ -389,7 +359,7 @@ h6 {
 .thanks-choose {
   font-size: 50px;
 }
-.thanks-deliver{
+.thanks-deliver {
   font-size: 30px;
 }
 
@@ -417,8 +387,6 @@ h6 {
     width: 90%;
     padding: 0;
     font-size: 20px;
-  
-    
   }
   .cars-gallery-img {
     width: 90%;
@@ -430,12 +398,12 @@ h6 {
     width: 100%;
   }
   .cars-item-list {
-  display: block;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  height: 600px;
-}
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+  }
 }
 
 @media (max-width: 400px) {
