@@ -25,16 +25,3 @@ function scrollToTop() {
   document.documentElement.scrollTop = 0;
 }
 
-function getDivId(button) {
-  let divId = button.parentNode.parentNode.previousElementSibling.id;
-  console.log(divId);
-}
-
-function getDivClass(button) {
-  let divClass = button.parentNode.parentNode.parentNode.className;
-  let targetClassName = "";
-
-  targetClassName = divClass.substring(divClass.lastIndexOf(" ") + 1);
-
-  console.log(targetClassName);
-}

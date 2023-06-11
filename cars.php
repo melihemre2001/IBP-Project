@@ -1,20 +1,17 @@
 <?php
 
-
-
-
-
 require 'config.php';
 
 $vehicles = array('suvs', 'trucks', 'sedans', 'vans', 'hybrids');
 
 foreach ($vehicles as $vehicleType) {
-    $query = "SELECT brand, model, year, price, color, rating, img FROM $vehicleType";
+    $query = "SELECT id,brand, model, year, price, color, rating, img FROM $vehicleType";
     $result = $conn->query($query);
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
 
+            $id = $row['id'];
             $brand = $row['brand'];
             $model = $row['model'];
             $year = $row['year'];
@@ -47,7 +44,6 @@ foreach ($vehicles as $vehicleType) {
                     </div>
                 </div>
 
-                <script src="script.js"></script>
             </body>
 
             </html>

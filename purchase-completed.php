@@ -2,6 +2,13 @@
 require 'config.php';
 require 'purchase.php';
 
+if (isset($_POST['purchase_car']) && isset($_POST['purchase_table'])) {
+    $purchase_car = $_POST['purchase_car'];
+    $purchase_table = $_POST['purchase_table'];
+
+    $deleteQuery = "DELETE FROM $purchase_table WHERE model = '$purchase_car'";
+    $deleteCar = mysqli_query($conn, $deleteQuery);
+}
 
 
 
@@ -49,6 +56,6 @@ require 'purchase.php';
         <script src="script.js"></script>
 </body>
 
-
+<script src="script.js"></script>
 
 </html>
