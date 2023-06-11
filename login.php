@@ -89,7 +89,7 @@ if (isset($_POST["submit"])) {
         }
 
         .login-container form .login-btn {
-            margin-left: 50%;
+            margin-left: 25%;
             transform: translateX(-50%);
             width: 120px;
             height: 34px;
@@ -108,8 +108,8 @@ if (isset($_POST["submit"])) {
             opacity: 0.7;
         }
 
-        .login-container form .register-btn {
-            margin-left: 50%;
+        .register-btn {
+            margin-left: 80%;
             transform: translateX(-50%);
             width: 120px;
             height: 34px;
@@ -124,14 +124,14 @@ if (isset($_POST["submit"])) {
             transition: 0.3s;
         }
 
-        .login-container form .register-btn:hover {
+        .register-btn:hover {
             opacity: 0.7;
         }
 
         .btn {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: space-around;
         }
     </style>
 
@@ -143,25 +143,23 @@ if (isset($_POST["submit"])) {
 </head>
 
 <body>
-    <div class="navbar-logo-login">
-        <a href="#"><img src="images/logo.png" class="logo" alt="" /></a>
-    </div>
+
     <div class="login-container">
-        <form action="" method="post" autocomplete="off">
+        <form action="" class="" method="post" autocomplete="off">
             <h1>Login</h1>
             <div class="form-group">
                 <label for="usernameemail"></label>
-                <input type="text" class="form-control" name="usernameemail" id="usernameemail" required placeholder="Username or Email">
+                <input type="text" class="form-control" name="usernameemail" id="usernameemail" requiredvalue="" placeholder="Username or Email">
             </div>
             <div class="form-group">
                 <label for="password"></label>
-                <input type="password" class="form-control" name="password" id="password" required placeholder="Password">
+                <input type="password" class="form-control" name="password" id="password" requiredvalue="" placeholder="Password">
             </div>
             <div class="btn">
                 <button type="submit" name="submit" class="login-btn">Login</button>
-                <a href="register.php"><input type="submit" class="register-btn" id="" value="Register"></a>
             </div>
         </form>
+        <a href="register.php"><button class="register-btn">Register</button></a>
     </div>
 
 </body>
