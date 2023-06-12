@@ -18,7 +18,7 @@ if (isset($_POST["submit"])) {
             "<script> alert('Register Successful'); </script>";
         } else {
             echo
-            "<script> alert('Password Doesn't Match'); </script>";
+            "<script> alert('Password Does Not Match'); </script>";
         }
     }
 }
@@ -65,7 +65,6 @@ if (isset($_POST["submit"])) {
 
         .login-container form {
             width: 100%;
-            height: 100%;
             padding: 20px;
             background: white;
             border-radius: 4px;
@@ -88,7 +87,7 @@ if (isset($_POST["submit"])) {
             padding: 0 10px;
         }
 
-        .login-container form .login-btn {
+        .login-btn {
             margin-left: 50%;
             transform: translateX(-50%);
             width: 120px;
@@ -104,7 +103,7 @@ if (isset($_POST["submit"])) {
             transition: 0.3s;
         }
 
-        .login-container form .login-btn:hover {
+        .login-btn:hover {
             opacity: 0.7;
         }
 
@@ -127,6 +126,10 @@ if (isset($_POST["submit"])) {
         .register-btn:hover {
             opacity: 0.7;
         }
+        .btn{
+            display: flex;
+            justify-content: space-between;
+        }
     </style>
 
 </head>
@@ -135,7 +138,7 @@ if (isset($_POST["submit"])) {
 <body>
 
     <div class="login-container">
-        <form action="" class="" method="post" autocomplete="off">
+        <form action="register.php" class="" method="post" autocomplete="off">
             <h1>Register</h1>
             <div class="form-group">
                 <label for="name"></label>
@@ -158,8 +161,10 @@ if (isset($_POST["submit"])) {
                 <input type="password" class="form-control" name="confirmpassword" id="confirmpassword" requiredvalue="" placeholder="Confirm Password">
             </div>
 
+            <div class="btn">
+                <button type="submit" name="submit" class="register-btn">Register</button>
+            </div>
         </form>
-        <button type="submit" name="submit" class="register-btn">Register</button>
         <a href="login.php"> <button class="login-btn">Login</button></a>
     </div>
 </body>
