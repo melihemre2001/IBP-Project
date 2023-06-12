@@ -29,9 +29,8 @@ require('config.php');
 
       <div class="navbar-links">
         <ul>
-          <li><a class="navbar-links-elements" href="#">Features</a></li>
           <li><a class="navbar-links-elements" href="how-it-works.html">How It Works</a></li>
-          <li><a class="navbar-links-elements" href="#">FAQ</a></li>
+          <li><a class="navbar-links-elements" href="faq.html">FAQ</a></li>
         </ul>
       </div>
       <div class="navbar-links-2">
