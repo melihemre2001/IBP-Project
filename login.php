@@ -62,6 +62,7 @@ if (isset($_POST["submit"])) {
             margin: auto;
             width: 500px;
             max-width: 90%;
+            
         }
 
         .login-container form {
@@ -73,7 +74,7 @@ if (isset($_POST["submit"])) {
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
-        .login-container form h1 {
+        .login-container form h2 {
             text-align: center;
             margin-bottom: 24px;
             color: #222;
@@ -147,7 +148,7 @@ if (isset($_POST["submit"])) {
 
     <div class="login-container">
         <form action="" class="" method="post" autocomplete="off">
-            <h1>Login</h1>
+            <h2>Login</h2>
             <div class="form-group">
                 <label for="usernameemail"></label>
                 <input type="text" class="form-control" name="usernameemail" id="usernameemail" requiredvalue="" placeholder="Username or Email">
